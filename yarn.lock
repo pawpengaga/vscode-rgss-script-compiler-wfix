@@ -786,7 +786,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/marshal@npm:^0.5.1":
+"@types/marshal@npm:^0.5.3":
   version: 0.5.3
   resolution: "@types/marshal@npm:0.5.3"
   dependencies:
@@ -2908,7 +2908,7 @@ __metadata:
     "@hyrious/marshal": "npm:^0.3.3"
     "@prettier/plugin-ruby": "npm:^4.0.2"
     "@types/glob": "npm:^8.1.0"
-    "@types/marshal": "npm:^0.5.1"
+    "@types/marshal": "npm:^0.5.3"
     "@types/node": "npm:20.x"
     "@types/uuid": "npm:^10.0.0"
     "@types/vscode": "npm:^1.81.0"
