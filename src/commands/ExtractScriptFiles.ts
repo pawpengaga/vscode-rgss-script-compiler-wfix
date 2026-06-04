@@ -116,8 +116,10 @@ export class RubyScriptService {
 
         this._args = [
             rubyFilePath,
-            `--output="${vscodeWorkspaceFolder}"`,
-            `--input="${scriptFile}"`,
+            "--output",
+            vscodeWorkspaceFolder,
+            "--input",
+            scriptFile,
         ];
     }
 
@@ -132,8 +134,7 @@ export class RubyScriptService {
             {
                 encoding: "utf8",
                 maxBuffer: 1024 * 1024,
-                cwd: this.configService.getExtensionContext().extensionPath,
-                shell: true,
+                cwd: this.configService.getExtensionContext().extensionPath
             },
             this._callback
         );

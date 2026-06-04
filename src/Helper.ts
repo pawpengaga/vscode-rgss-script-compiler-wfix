@@ -218,7 +218,9 @@ export namespace Helper {
                 vscode.StatusBarAlignment.Left,
             );
             statusBarItem.text = `$(pulse) Game Path: ${projectPath.fsPath}`;
-            statusBarItem.backgroundColor = "yellow";
+            statusBarItem.backgroundColor = new vscode.ThemeColor(
+                "statusBarItem.warningBackground"
+            );
 
             return statusBarItem;
         }

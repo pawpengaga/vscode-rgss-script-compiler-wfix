@@ -1,13 +1,13 @@
 {
-    "name": "rgss-script-compiler",
-    "displayName": "RGSS Script Compiler",
-    "description": "This extension allows you to compile script files as a bundle file called 'Scripts.rvdata2'",
-    "repository": "https://github.com/biud436/vscode-rgss-script-compiler",
-    "version": "1.0.0",
+    "name": "rgss-script-compiler-wfix",
+    "displayName": "RGSS Script Compiler (Windows Fix Fork)",
+    "description": "Fork of RGSS Script Compiler with Windows path handling fixes and compatibility improvements.",
+    "repository": "https://github.com/pawpengaga/vscode-rgss-script-compiler-wfix",
+    "version": "1.0.1",
     "engines": {
         "vscode": "^1.81.0"
     },
-    "publisher": "biud436",
+    "publisher": "pawpengaga",
     "license": "MIT",
     "categories": [
         "Other"
@@ -217,7 +217,7 @@
     "devDependencies": {
         "@prettier/plugin-ruby": "^4.0.2",
         "@types/glob": "^8.1.0",
-        "@types/node": "20.x",
+        "@types/node": "^20.19.41",
         "@types/vscode": "^1.81.0",
         "@typescript-eslint/eslint-plugin": "^6.3.0",
         "@typescript-eslint/parser": "^6.3.0",

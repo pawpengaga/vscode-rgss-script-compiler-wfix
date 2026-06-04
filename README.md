@@ -1,3 +1,43 @@
+# THIS IS A FORK
+
+[Original repo](https://github.com/biud436/vscode-rgss-script-compiler)
+
+## Windows path handling fix
+
+Fixes an issue in `src/commands/ExtractScriptFiles.ts` where script extraction and compilation could fail on Windows when paths contained spaces (User profile directories like `C:\Users\John Doe`).
+
+## Changes
+- Removed `shell: true` from execFile
+- Passed command line arguments as separate parameters instead of embedding quotes in argument values
+- Fixed handling of workspace and script paths containing spaces
+- Improved compatibility with modern Windows environments
+- The extension runs now!
+
+## Root cause
+
+The original implementation uses:
+
+```ts
+execFile("ruby", args, {
+    // ...
+    shell: true
+})
+```
+
+combined with quoted arguments:
+
+`--output="${vscodeWorkspaceFolder}"`
+`--input="${scriptFile}"`
+
+Under some Windows configurations this caused Ruby to receive malformed paths, rendering the extension useless.
+
+## Why
+
+This fork was created for personal use and long-term preservation of the extension for RPG Maker VX Ace projects.
+
+---
+
+
 # Introduction
 
 This extension allows you to edit scripts directly in Visual Studio Code without using the script editor of `RPG Maker VX Ace` or `RPG Maker XP`.
